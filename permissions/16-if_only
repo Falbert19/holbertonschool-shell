@@ -1,2 +1,2 @@
 #!/bin/bash
-if [ "$hello"="guillaume" ] then chown vincent hello fi 
+chown --from=guillaume vicent hello
