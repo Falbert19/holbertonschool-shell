@@ -1,2 +1,2 @@
 #!/bin/bash
-tar /etc/passwd
+grep /etc/passwd
