@@ -1,2 +1,3 @@
 #!/bin/bash
-if [ ="guillaume" ] then chown vicent hello fi
+if [ "$hello" = "guillaume" ] then chown vicent hello fi
+
