@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(echo PATH=$PATH | tr -cd ':' | wc -c) + 1
+ls -1| wc -1 PATH=$PATH
