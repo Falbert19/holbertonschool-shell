@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(( $(echo "$WATER" | tr 'water' '01234' | fold -w1 | paste -sd+ | bc) + $(echo "$STIR" | tr 'stir.' '01234' | fold -w1 | paste -sd+ | bc) )) | tr '0123456789' 'shtbeolhc'
+W=$(echo "$WATER" | tr 'water' '01234' | awk '{n=0; for(i=1;i<=length;i++) n=n*5+substr($0,i,1); print n}'); S=$(echo "$STIR" | tr 'stir.' '01234' | awk '{n=0; for(i=1;i<=length;i++) n=n*5+substr($0,i,1); print n}'); R=$((W+S)); echo $R | awk '{n=$1; s=""; while (n > 0) {s=sprintf("%c", 98+n%7) s; n=int(n/7)} print s}'
