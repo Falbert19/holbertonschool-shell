@@ -1,2 +1,10 @@
 #!/bin/bash
-echo $PATH | tr ':' '\n' | grep 'bin' | wc -l
+
+PATH_VAR="$PATH"
+
+MODIFIED_PATH=`echo "$PATH_VAR" | sed -e 's/^:/EMPTY:/' -e 's/:$/:EMPTY/' -e 's/::/:EMPTY:/g'`
+
+COUNT=`echo "$MODIFIED_PATH" | tr ':' '\n' | wc -l`
+
+echo "$COUNT"
+
