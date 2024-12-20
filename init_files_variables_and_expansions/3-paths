@@ -1,3 +1,2 @@
 #!/bin/bash
 echo "$PATH" | sed -e 's/^:/EMPTY:/' -e 's/:$/:EMPTY/' -e 's/::/:EMPTY:/g' | tr ':' '\n' | wc -l
-
